@@ -67,7 +67,7 @@ sudo certbot -d app.productleaderboard.ovh \
 ```
 
 
-## 4. Configurer Nginx pour HTTPS de LB sur l’IP privée 10.1.0.4:4000 en SSL: (HTTPS (LB) <-> HTTPS (Nginx)
+## 4. Configurer Nginx pour HTTPS de LB sur l’IP privée  en SSL: (HTTPS (LB) <-> HTTPS (Nginx)
 
 Crée le fichier `/etc/nginx/sites-available/nextjs-local-ssl.conf` :
 ```nginx
@@ -124,7 +124,7 @@ sudo ufw allow 80/tcp
 sudo ufw status
 ```
 
-## 6. Vérifier que Nginx écoute sur 10.1.0.4:4000
+## 6. Vérifier que Nginx écoute sur IP privée
 ```bash
 ss -tuln | grep 4000
 ```
