@@ -90,23 +90,6 @@ server {
     listen 4000 ssl; # c'est le port defini dans le pool OVH du LB
     server_name _;  # attrape toutes les requêtes
 
-    ssl_certificate /etc/letsencrypt/live/lb.productleaderboard.ovh/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/lb.productleaderboard.ovh/privkey.pem;
-
-    location / {
-        proxy_pass http://127.0.0.1:3000; # url de l'application qui tourne
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-    }
-}
-
-# HTTPS pour accès direct public
-server {
-    listen 443 ssl;
-    server_name <your-domaine>;
-
     ssl_certificate /etc/letsencrypt/live/<your-domaine>/fullchain.pem;
     ssl_certificate_key /etc/letsencrypt/live/<your-domaine>/privkey.pem;
 
