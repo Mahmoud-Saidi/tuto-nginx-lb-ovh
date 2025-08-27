@@ -5,6 +5,7 @@ NB: les deux variables globales que vous devez definir sont : your-domaine et yo
 ## 1. Lancer l’application Next.js (vous pouvez utiliser une autre application qui tourne sur 127.0.0.1:3000 ou autre, juste adapte le conf nginx)
 
 ```bash
+npm install
 npm run build
 npm run start
 ```
