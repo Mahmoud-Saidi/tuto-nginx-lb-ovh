@@ -35,7 +35,7 @@ Il faut créer un balanceur puis une instance avec un listener/pool
 ## 4.1. Certbot pour générer le certificat manual
 
 ```bash
-# Cette commande va vous donner une valeur que tu doit le mettre dans ton _acme-challenge.app.productleaderboard.ovh. en type TXT (attends un peut le dns puis continuer pour génerer les certificats)
+# Cette commande va vous donner une valeur que tu doit le mettre dans ton _acme-challenge.<your-domaine> en type TXT (attends un peut le dns puis continuer pour génerer les certificats)
 sudo certbot -d <your-domaine> --manual --preferred-challenges dns certonly
 
 # Pour verifier que la valeur est prix en compte :
@@ -46,7 +46,7 @@ dig TXT _acme-challenge.<your-domaine> @8.8.8.8 +short
 
 ## 4.2 Certbot pour générer le certificat auto avec OVH
 
-Voici comment automatiser complètement l’obtention et le renouvellement du certificat SSL pour app.productleaderboard.ovh avec OVH DNS et Certbot :
+Voici comment automatiser complètement l’obtention et le renouvellement du certificat SSL pour <your-domaine> avec OVH DNS et Certbot :
 
 **Générer les clés OVH**
 ```bash
@@ -69,7 +69,7 @@ chmod 600 ~/.ovhapi.ini
 ```
 
 ```bash
-sudo certbot -d app.productleaderboard.ovh \
+sudo certbot -d <your-domaine> \
   --dns-ovh \
   --dns-ovh-credentials ~/.ovhapi.ini \
   --dns-ovh-propagation-seconds 60 \
