@@ -130,7 +130,7 @@ ss -tuln | grep 4000
 ```
 ## 7. Création du load balanceur OVH
 
-Il faut créer créer un balanceur puis une instance avec un listener/pool
+Il faut créer un balanceur puis une instance avec un listener/pool
 
 ![alt text](image.png)
 
