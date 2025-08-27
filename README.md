@@ -1,4 +1,4 @@
-# Déploiement application (https://<your-domaine>, IP privée)
+# Déploiement application (https://your-domaine, IP privée)
 
 NB: les deux variables globales que vous devez definir sont : <your-domaine> et <your-email>
 
