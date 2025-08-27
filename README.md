@@ -2,7 +2,7 @@
 
 NB: les deux variables globales que vous devez definir sont : your-domaine et your-email
 
-Dans dns gestion de domaine il faut associé **<your-domaine>** a l'adresse publique de la VM sur la quelle tourne l'application avec type A
+Dans Zone DNS de OVH, il faut associé **<your-domaine>** a l'adresse publique de la VM sur la quelle tourne l'application avec type A
 
 ## 1. Lancer l’application Next.js (vous pouvez utilser une autre application qui tourne sur 127.0.0.1:3000 ou autre, juste adapte le conf nginx)
 
