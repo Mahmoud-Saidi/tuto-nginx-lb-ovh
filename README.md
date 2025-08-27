@@ -1,4 +1,4 @@
-# Déploiement application (https://your-domaine, IP privée)
+# Déploiement application sur instance (Vm) OVH et exposition du service sur https://your-domaine avec un balanceur
 
 NB: les deux variables globales que vous devez definir sont : your-domaine et your-email
 
