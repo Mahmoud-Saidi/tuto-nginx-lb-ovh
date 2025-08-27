@@ -2,8 +2,6 @@
 
 NB: les deux variables globales que vous devez definir sont : your-domaine et your-email
 
-Dans Zone DNS de OVH, il faut associé **<your-domaine>** a l'adresse publique de la VM sur la quelle tourne l'application avec type A
-
 ## 1. Lancer l’application Next.js (vous pouvez utilser une autre application qui tourne sur 127.0.0.1:3000 ou autre, juste adapte le conf nginx)
 
 ```bash
@@ -30,8 +28,8 @@ Il faut créer un balanceur puis une instance avec un listener/pool
 ```bash
 1. Connectez vous sur : https://www.ovh.com/manager/#/web/domain
 2. Associé un <your-domaine> a l'adresse publique du balanceur OVH en Type A :
-![alt text](image-1.png)
 ```
+![alt text](image-1.png)
 
 ## 4.1. Certbot pour générer le certificat manual
 
