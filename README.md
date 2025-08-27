@@ -2,7 +2,7 @@
 
 NB: les deux variables globales que vous devez definir sont : your-domaine et your-email
 
-## 1. Lancer l’application Next.js sur la VM (vous pouvez utiliser une autre application qui tourne sur 127.0.0.1:3000 ou autre, juste adapte le conf nginx)
+## 1. Lancer l’application Next.js sur la VM (vous pouvez utiliser une autre application qui tourne sur 127.0.0.1:3000 ou autre, juste adapte la configuration nginx)
 
 ```bash
 npm install
