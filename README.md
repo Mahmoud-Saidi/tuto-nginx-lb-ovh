@@ -1,4 +1,4 @@
-# Déploiement d'une application sur instance (VM) OVH et exposition du service sur https://your-domaine avec un balanceur
+# Déploiement d'une application sur une instance (VM) OVH et exposition du service sur https://your-domaine avec un balanceur
 
 NB: les deux variables globales que vous devez definir sont : your-domaine et your-email
 
