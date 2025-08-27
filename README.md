@@ -28,7 +28,7 @@ Il faut créer un balanceur puis une instance avec un listener/pool
 
 ```bash
 1. Connectez vous sur : https://www.ovh.com/manager/#/web/domain
-2. Associé <your-domaine> a l'adresse publique du balanceur OVH en Type A :
+2. Associez <your-domaine> a l'adresse publique du balanceur OVH en Type A :
 ```
 ![alt text](image-1.png)
 
