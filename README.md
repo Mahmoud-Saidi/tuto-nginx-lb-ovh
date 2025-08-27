@@ -35,7 +35,7 @@ Il faut créer un balanceur puis une instance avec un listener/pool
 ## 4.1. Certbot pour générer le certificat manual
 
 ```bash
-# Cette commande va vous donner une valeur que vous devez le mettre dans ton _acme-challenge.<your-domaine> en type TXT (attendez un peu le dns puis continuer pour génerer les certificats)
+# Cette commande va vous donner une valeur que vous devez le mettre au niveau de la creation de  _acme-challenge.<your-domaine> en type TXT (Méme démarche que creation de domaine, attendez un peu le dns puis continuer pour génerer les certificats)
 sudo certbot -d <your-domaine> --manual --preferred-challenges dns certonly
 
 # Pour verifier que la valeur est prix en compte :
