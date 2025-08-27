@@ -18,7 +18,22 @@ sudo apt update
 sudo apt install nginx
 ```
 
-## 3.1. Certbot pour générer le certificat manual
+## 3. Création du load balanceur OVH
+
+Il faut créer un balanceur puis une instance avec un listener/pool
+
+![alt text](image.png)
+
+
+## 4. Création de domaine
+
+```bash
+1. Connectez vous sur : https://www.ovh.com/manager/#/web/domain
+2. Associé un <your-domaine> a l'adresse publique du balanceur OVH en Type A :
+![alt text](image-1.png)
+```
+
+## 4.1. Certbot pour générer le certificat manual
 
 ```bash
 # Cette commande va vous donner une valeur que tu doit le mettre dans ton _acme-challenge.app.productleaderboard.ovh. en type TXT (attends un peut le dns puis continuer pour génerer les certificats)
@@ -30,7 +45,7 @@ dig TXT _acme-challenge.<your-domaine> @8.8.8.8 +short
 
 ```
 
-## 3.2 Certbot pour générer le certificat auto avec OVH
+## 4.2 Certbot pour générer le certificat auto avec OVH
 
 Voici comment automatiser complètement l’obtention et le renouvellement du certificat SSL pour app.productleaderboard.ovh avec OVH DNS et Certbot :
 
@@ -67,7 +82,7 @@ sudo certbot -d app.productleaderboard.ovh \
 ```
 
 
-## 4. Configurer Nginx pour HTTPS de LB sur l’IP privée  en SSL: (HTTPS (LB) <-> HTTPS (Nginx)
+## 5. Configurer Nginx pour HTTPS de LB sur l’IP privée  en SSL: (HTTPS (LB) <-> HTTPS (Nginx)
 
 Crée le fichier `/etc/nginx/sites-available/nextjs-local-ssl.conf` :
 ```nginx
@@ -114,7 +129,7 @@ sudo nginx -t
 sudo systemctl reload nginx
 ```
 
-## 5. Vérifier le firewall
+## 6. Vérifier le firewall
 
 Pour UFW :
 ```bash
@@ -124,15 +139,10 @@ sudo ufw allow 80/tcp
 sudo ufw status
 ```
 
-## 6. Vérifier que Nginx écoute sur IP privée
+## 7. Vérifier que Nginx écoute sur IP privée
 ```bash
 ss -tuln | grep 4000
 ```
-## 7. Création du load balanceur OVH
-
-Il faut créer un balanceur puis une instance avec un listener/pool
-
-![alt text](image.png)
 
 ## 8. Vérifier que l'application marche sur le domaine:
 ```bash
