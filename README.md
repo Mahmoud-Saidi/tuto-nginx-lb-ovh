@@ -85,7 +85,7 @@ sudo certbot -d <your-domaine> \
 
 Crée le fichier `/etc/nginx/sites-available/nextjs-local-ssl.conf` :
 ```nginx
-# LB (HTTPS) vers Ngnix (HTTPS) vers application (HTTP) (exemple : Next.js)  (port LB → 4000 -> 3000)
+# LB (HTTPS) vers Ngnix (HTTPS) vers application (HTTP) (exemple : Next.js)  (443 LB → 4000 Ngnix -> application 3000)
 server {
     listen 4000 ssl; # c'est le port defini dans le pool OVH du LB
     server_name _;  # attrape toutes les requêtes
