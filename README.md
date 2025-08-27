@@ -1,6 +1,6 @@
 # Déploiement application (https://your-domaine, IP privée)
 
-NB: les deux variables globales que vous devez definir sont : <your-domaine> et <your-email>
+NB: les deux variables globales que vous devez definir sont : your-domaine et your-email
 
 Dans dns gestion de domaine il faut associé **<your-domaine>** a l'adresse publique de la VM sur la quelle tourne l'application avec type A
 
